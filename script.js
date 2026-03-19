@@ -26,3 +26,5 @@ if (button && statusText) {
     statusText.textContent = "Clicked. JavaScript is running.";
   });
 }
+
+// (YouTube lazy loader removed; using local MP4)

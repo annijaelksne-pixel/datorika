@@ -6,166 +6,303 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;600&display=swap">
-<style>
-body,h1,h2,h3,h4,h5,p,a,button,input,label,span,li {font-family:"Inconsolata", monospace}
-body {
-  font-size:16px;
-  background:#fff;
-  color:#111;
-}
-.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
-.w3-half img:hover{opacity:1}
-.w3-sidebar{
-  background:#000 !important;
-  color:#fff !important;
-}
-.sidebar-link{
-  font-weight:600;
-  font-size:24px;
-  color:#fff !important;
-  text-transform:uppercase;
-  letter-spacing:2px;
-  transition:background-color .2s,color .2s;
-}
-.sidebar-link:hover{
-  background:#d9d9d9 !important;
-  color:#000 !important;
-}
-.sub-link{
-  font-size:17px;
-  letter-spacing:1px;
-  padding-left:36px !important;
-}
-.submenu{
-  display:none;
-}
-.submenu.open{
-  display:block;
-}
-.w3-red,
-.w3-hover-red:hover{
-  background:#000 !important;
-  color:#fff !important;
-}
-.w3-text-red{
-  color:#111 !important;
-}
-.w3-light-grey{
-  background:#f2f2f2 !important;
-  color:#111 !important;
-}
-.w3-dark-grey{
-  background:#111 !important;
-  color:#fff !important;
-}
-.w3-button{
-  border-radius:0 !important;
-}
-hr[style*="solid red"]{
-  border-color:#111 !important;
-}
-.brand-name{
-  font-family:"Inconsolata", monospace;
-  letter-spacing:2px;
-  font-size:42px;
-  line-height:1.1;
-  text-transform:uppercase;
-}
-.portfolio-section{
-  min-height:100vh;
-  padding-top:80px;
-}
-</style>
+<link rel="stylesheet" href="CSS/mansStils.css">
 </head>
 <body>
 
-<!-- Sidebar/menu -->
-<nav class="w3-sidebar w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
-  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Aizver ciet</a>
+<nav class="w3-sidebar w3-collapse w3-top w3-large w3-padding sanu-izkartojums" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft aizvert-izvelni-poga">Aizver ciet</a>
   <div class="w3-container">
-    <h3 class="w3-padding-64 brand-name"><b>Datorikas<br>portfolio</b></h3>
+    <h3 class="w3-padding-64 zimola-nosaukums"><b>Datorikas<br>portfolio</b></h3>
   </div>
   <div class="w3-bar-block">
-    <a href="#showcase" onclick="w3_close()" class="w3-bar-item w3-button sidebar-link">Attēlu apstrāde</a> 
-    <a href="#services" onclick="w3_close()" class="w3-bar-item w3-button sidebar-link">Izklājlapas</a> 
-    <a href="#designers" onclick="w3_close()" class="w3-bar-item w3-button sidebar-link">Tekstapstrāde</a> 
-    <a href="#packages" onclick="w3_close()" class="w3-bar-item w3-button sidebar-link">Ergonomisks darba režīms</a> 
-    <a href="javascript:void(0)" onclick="toggleStundasMenu()" class="w3-bar-item w3-button sidebar-link">Stundas darbs</a>
-    <div id="stundasSubmenu" class="submenu">
-      <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button sidebar-link sub-link">Forma</a>
-      <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button sidebar-link sub-link">Dzer daudz</a>
-      <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button sidebar-link sub-link">Dzer</a>
+    <a href="#sakums" onclick="w3_close()" class="w3-bar-item w3-button sanu-saite">Sākums</a>
+    <a href="javascript:void(0)" onclick="toggleSubmenu('atteluSubmenu')" class="w3-bar-item w3-button sanu-saite">Attēlu apstrāde</a>
+    <div id="atteluSubmenu" class="apaksizvelne">
+      <a href="#rakstgrafika" onclick="w3_close()" class="w3-bar-item w3-button sanu-saite apakssaite">Rastrgrafika</a>
+      <a href="#vektorgrafika" onclick="w3_close()" class="w3-bar-item w3-button sanu-saite apakssaite">Vektorgrafika</a>
+      <a href="#modelesana" onclick="w3_close()" class="w3-bar-item w3-button sanu-saite apakssaite">3D modelēšana</a>
+      <a href="#video" onclick="w3_close()" class="w3-bar-item w3-button sanu-saite apakssaite">Video</a>
+    </div>
+    <a href="#izklajlapas" onclick="w3_close()" class="w3-bar-item w3-button sanu-saite">Izklājlapas</a> 
+    <a href="#tekstapstrade" onclick="w3_close()" class="w3-bar-item w3-button sanu-saite">Tekstapstrāde</a> 
+    <a href="otrais.html" class="w3-bar-item w3-button sanu-saite">Individuālā tēma</a> 
+    <a href="javascript:void(0)" onclick="toggleSubmenu('stundasSubmenu')" class="w3-bar-item w3-button sanu-saite">Stundas darbs</a>
+    <div id="stundasSubmenu" class="apaksizvelne">
+      <a href="#forma-link" onclick="w3_close()" class="w3-bar-item w3-button sanu-saite apakssaite">Forma</a>
+      <a href="#dzerdaudz-link" onclick="w3_close()" class="w3-bar-item w3-button sanu-saite apakssaite">Dzer daudz</a>
+      <a href="#dzer-link" onclick="w3_close()" class="w3-bar-item w3-button sanu-saite apakssaite">Dzer</a>
     </div>
   </div>
 </nav>
 
-<!-- Top menu on small screens -->
 <header class="w3-container w3-top w3-hide-large w3-black w3-xlarge w3-padding">
   <a href="javascript:void(0)" class="w3-button w3-black w3-margin-right" onclick="w3_open()">☰</a>
 </header>
 
-<!-- Overlay effect when opening sidebar on small screens -->
-<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+<div class="w3-overlay w3-hide-large parklajs-klik" onclick="w3_close()" title="close side menu" id="myOverlay"></div>
 
-<!-- !PAGE CONTENT! -->
-<div class="w3-main" style="margin-left:340px;margin-right:40px">
+<div class="w3-main galvena-izkartojums">
 
-  <!-- Header -->
-  <div class="w3-container portfolio-section" id="showcase">
+  <div class="w3-container portfelja-sadala" id="sakums">
     <h1 class="w3-jumbo"><b>DATORIKAS PORTFOLIO</b></h1>
     <h1 class="w3-xxxlarge w3-text-red"><b>Attēlu apstrāde.</b></h1>
-    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <hr class="w3-round sadala-dalitajs">
+    <div class="temu-saraksts">
+      <div class="temas-ieraksts">
+        <div class="temas-virsraksta-rinda">
+          <p id="rakstgrafika" class="temas-zime"><strong>Rastrgrafika</strong></p>
+          <div class="temas-programmas-rinda">
+            <p class="temas-programma">Programma - Gimp</p>
+            <img
+              class="programmas-logo"
+              src="images/Bilde 3.png"
+              alt="Gimp logo"
+            >
+          </div>
+        </div>
+        <p class="temas-apraksts">
+          Attēlu veido atsevišķi punkti jeb rastra elementi, kurus sauc par
+          pikseļiem.
+        </p>
+        <img
+          class="temas-attels"
+          src="images/banneris.gif"
+          alt="Ergonomisks ritms ilgtspējīgs darbs baneris"
+        >
+      </div>
+      <div class="temas-ieraksts">
+        <div class="temas-virsraksta-rinda">
+          <p id="vektorgrafika" class="temas-zime"><strong>Vektorgrafika</strong></p>
+          <div class="temas-programmas-rinda">
+            <p class="temas-programma">Programma - Inkscape</p>
+            <img
+              class="programmas-logo"
+              src="images/Bilde 4.png"
+              alt="Inkscape logo"
+            >
+          </div>
+        </div>
+        <p class="temas-apraksts">Attēlu veido no taisnēm un līknēm.</p>
+        <div class="temas-logo-rinda">
+          <img
+            class="temas-attels temas-attels-logo"
+            src="images/logo.png"
+            alt="Vektorgrafikas logo"
+          >
+          <div class="logo-atzime">
+            <p class="logo-atzimes-birka">Logo ideja</p>
+            <p class="temas-apraksts temas-logo-teksts">
+              Logo ir parādīts laimīgs sparģelis, kas atspoguļo uzņēmuma
+              nosaukumu un to, ka tas nodarbojas ar dārzeņu audzēšanu,
+              pārstrādi un tirdzniecību. Sparģelis ir laimīgs, jo uzņēmuma
+              produkcija ir organiski audzēta, augstākās kvalitātes un
+              uzturvielām bagāta. Kā arī vārds "Sparģelis" nosauc uzņēmumu. Kā
+              krāsas ir izmantoti dažādi zaļi toņi, kas atbilst uzņēmuma
+              veģetārisma un vegānisma filozofijai.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="temas-ieraksts">
+        <div class="temas-virsraksta-rinda">
+          <p id="modelesana" class="temas-zime"><strong>3D modelēšana</strong></p>
+          <div class="temas-programmas-rinda">
+            <p class="temas-programma">Programma - Tinkercad</p>
+            <img
+              class="programmas-logo"
+              src="images/Bilde 5.png"
+              alt="Tinkercad logo"
+            >
+          </div>
+        </div>
+        <div class="temas-attelu-rinda">
+          <img
+            class="temas-attels temas-attels-mazs"
+            src="images/kubs.png"
+            alt="3D kuba attēls"
+          >
+          <img
+            class="temas-attels temas-attels-mazs"
+            src="images/Bilde 1.png"
+            alt="3D modelēšanas ekrānuzņēmums"
+          >
+        </div>
+      </div>
+      <div class="temas-ieraksts">
+        <div class="temas-virsraksta-rinda">
+          <p id="video" class="temas-zime"><strong>Video</strong></p>
+          <div class="temas-programmas-rinda">
+            <p class="temas-programma">Programma - InShot</p>
+            <img
+              class="programmas-logo"
+              src="images/Bilde 6.png"
+              alt="InShot logo"
+            >
+          </div>
+        </div>
+        <div class="video-iegulums">
+          <video
+            controls
+            playsinline
+            poster="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAn8B9VIb/QAAAABJRU5ErkJggg=="
+            title="Reklāma.Annija_Elksne_10E.MP4"
+          >
+            <source
+              src="https://eduriga-my.sharepoint.com/personal/aelksne7_edu_riga_lv/_layouts/15/download.aspx?UniqueId=b8297f38-3e56-4172-8eac-a01ebc7e0908&download=1"
+              type="video/mp4"
+            >
+            Jūsu pārlūks neatbalsta video atskaņošanu. <a
+              href="https://eduriga-my.sharepoint.com/personal/aelksne7_edu_riga_lv/_layouts/15/download.aspx?UniqueId=b8297f38-3e56-4172-8eac-a01ebc7e0908&download=1"
+              target="_blank"
+              rel="noopener noreferrer"
+            >Atvērt video jaunā cilnē</a>.
+          </video>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <!-- Services -->
-  <div class="w3-container portfolio-section" id="services">
-    <h1 class="w3-xxxlarge w3-text-red"><b>Izklājlapas.</b></h1>
-    <hr style="width:50px;border:5px solid red" class="w3-round">
+  <div class="w3-container portfelja-sadala" id="izklajlapas">
+    <div class="sadala-virsraksta-rinda">
+      <h1 class="w3-xxxlarge w3-text-red"><b>Izklājlapas.</b></h1>
+      <img
+        class="virsraksta-logo"
+        src="images/bildeexcel.png"
+        alt="Excel ikona"
+      >
+    </div>
+    <hr class="w3-round sadala-dalitajs">
+    <div class="satura-kartite">
+      <p class="definicijas-lauks">
+        Sastāv no rindām un kolonnām, kuru krustpunktus sauc par šūnām. Šūnās
+        var ievadīt tekstu, skaitļus un formulas.
+      </p>
+      <p class="sadalas-teksts">
+        Izklājlapās apguvām datu ievadi un apstrādi, formulu un funkciju
+        izmantošanu, šūnu formatēšanu, tabulu veidošanu, datu kārtošanu un
+        filtrēšanu, kā arī diagrammu izveidi un rediģēšanu.
+      </p>
+    </div>
+    <div class="lejupielades-rinda">
+      <a class="lejupielades-saite lejupielades-poga" href="aprekini.xlsx" download>Aprēķini</a>
+    </div>
   </div>
   
-  <!-- Designers -->
-  <div class="w3-container portfolio-section" id="designers">
-    <h1 class="w3-xxxlarge w3-text-red"><b>Tekstapstrāde.</b></h1>
-    <hr style="width:50px;border:5px solid red" class="w3-round">
+  <div class="w3-container portfelja-sadala" id="tekstapstrade">
+    <div class="sadala-virsraksta-rinda">
+      <h1 class="w3-xxxlarge w3-text-red"><b>Tekstapstrāde.</b></h1>
+      <img
+        class="virsraksta-logo"
+        src="images/bilde-1.png"
+        alt="Microsoft Word ikona"
+      >
+    </div>
+    <hr class="w3-round sadala-dalitajs">
+    <div class="satura-kartite">
+      <p class="definicijas-lauks">
+        Datora izmantošana dokumentu veidošanas, rediģēšanas, formatēšanas,
+        lasīšanas un drukāšanas procesā.
+      </p>
+      <p class="sadalas-teksts">
+        Tekstapstrādē apguvām teksta formatēšanu, rindkopu formatēšanu, dažādu
+        objektu ievietošanu tekstā, satura rādītāja, paraksta un citu atsauces
+        tipa objektu ievietošanu, veidnes, pasta sapludināšanu u.t.t.
+      </p>
+    </div>
+
+    <div class="satura-kartite dok-bloks">
+      <p class="sadalas-teksts">
+        Par individuālo tēmu formatēts dokuments atbilstoši ZPD formēšanas
+        noteikumiem.
+      </p>
+      <a
+        class="dok-poga"
+        href="Ergonomisks darba režīms 3.docx"
+        download="Ergonomisks darba režīms.docx"
+      >Lejupielādēt Word failu</a>
+    </div>
+
+    <div class="kadru-kopa">
+      <a
+        class="kadra-kartite"
+        href="images/bilde-2.png"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          src="images/bilde-2.png"
+          alt="Tekstapstrādes uzdevuma ekrānuzņēmums"
+        >
+      </a>
+
+      <a
+        class="kadra-kartite"
+        href="images/bilde-3.png"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          src="images/bilde-3.png"
+          alt="Tekstapstrādes uzdevuma ekrānuzņēmums ar atsaucēm un veidnēm"
+        >
+      </a>
+
+      <a
+        class="kadra-kartite"
+        href="images/bilde-4.png"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          src="images/bilde-4.png"
+          alt="Tekstapstrādes uzdevuma ekrānuzņēmums ar ātrajiem blokiem"
+        >
+      </a>
+    </div>
   </div>
 
-  <!-- Packages / Pricing Tables -->
-  <div class="w3-container portfolio-section" id="packages">
-    <h1 class="w3-xxxlarge w3-text-red"><b>Ergonomisks darba režīms.</b></h1>
-    <hr style="width:50px;border:5px solid red" class="w3-round">
-  </div>
-  
-  <!-- Contact -->
-  <div class="w3-container portfolio-section" id="contact">
+  <div class="w3-container portfelja-sadala" id="stundasdarbs">
     <h1 class="w3-xxxlarge w3-text-red"><b>Stundas darbs.</b></h1>
-    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <hr class="w3-round sadala-dalitajs">
+    <div class="darbu-saites">
+      <a
+        id="forma-link"
+        class="darba-kartite"
+        href="forma.html"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <strong>Forma</strong>
+      </a>
+      <a
+        id="dzerdaudz-link"
+        class="darba-kartite"
+        href="dzerdaudz.html"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <strong>Dzer daudz</strong>
+      </a>
+      <a
+        id="dzer-link"
+        class="darba-kartite"
+        href="dzer.html"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <strong>Dzer</strong>
+      </a>
+    </div>
   </div>
 
-<!-- End page content -->
 </div>
 
-<div class="w3-light-grey w3-container w3-padding-32" style="padding-right:58px">
+<div class="w3-light-grey w3-container w3-padding-32 kajenes-izkartojums">
   <p class="w3-right">Annija Elksne 10E</p>
 </div>
 
-<script>
-// Script to open and close sidebar
-function w3_open() {
-  document.getElementById("mySidebar").style.display = "block";
-  document.getElementById("myOverlay").style.display = "block";
-}
- 
-function w3_close() {
-  document.getElementById("mySidebar").style.display = "none";
-  document.getElementById("myOverlay").style.display = "none";
-}
-
-function toggleStundasMenu() {
-  const submenu = document.getElementById("stundasSubmenu");
-  submenu.classList.toggle("open");
-}
-
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>

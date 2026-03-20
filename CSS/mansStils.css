@@ -1,0 +1,578 @@
+body,h1,h2,h3,h4,h5,p,a,button,input,label,span,li {font-family:"Inconsolata", monospace}
+body {
+  font-size:16px;
+  background:
+    linear-gradient(rgba(255,255,255,0.86), rgba(255,255,255,0.9)),
+    url("../Images/background.svg.png") center/cover fixed no-repeat;
+  color:#111;
+}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+.w3-sidebar{
+  background:#000 !important;
+  color:#fff !important;
+}
+.sanu-izkartojums{
+  z-index:3;
+  width:300px;
+  font-weight:bold;
+}
+.sanu-saite{
+  font-weight:600;
+  font-size:24px;
+  color:#fff !important;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  transition:background-color .2s,color .2s;
+}
+.sanu-saite:hover{
+  background:#d9d9d9 !important;
+  color:#000 !important;
+}
+.apakssaite{
+  font-size:17px;
+  letter-spacing:1px;
+  padding-left:36px !important;
+}
+.apaksizvelne{
+  display:none;
+}
+.apaksizvelne.open{
+  display:block;
+}
+.aizvert-izvelni-poga{
+  width:100%;
+  font-size:22px;
+}
+.parklajs-klik{
+  cursor:pointer;
+}
+.labais-nav{
+  position:fixed;
+  top:120px;
+  right:28px;
+  width:180px;
+  padding:14px 16px;
+  border:2px solid #111;
+  background:#f7f7f7;
+  box-shadow:6px 6px 0 #111;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  z-index:5;
+}
+.labais-nav-nosaukums{
+  margin:0 0 4px;
+  font-size:16px;
+  font-weight:700;
+  letter-spacing:1px;
+  text-transform:uppercase;
+}
+.labais-nav a{
+  color:#111;
+  text-decoration:none;
+  font-size:15px;
+  padding:6px 8px;
+  border:1px solid transparent;
+  transition:background-color .2s, border-color .2s;
+}
+.labais-nav a:hover{
+  background:#e0e0e0;
+  border-color:#111;
+}
+@media (max-width: 960px){
+  .labais-nav{
+    display:none;
+  }
+}
+.galvena-izkartojums{
+  margin-left:340px;
+  margin-right:40px;
+}
+.sadala-dalitajs{
+  width:50px;
+  border:5px solid #000;
+}
+.w3-red,
+.w3-hover-red:hover{
+  background:#000 !important;
+  color:#fff !important;
+}
+.w3-text-red{
+  color:#111 !important;
+}
+.w3-light-grey{
+  background:#f2f2f2 !important;
+  color:#111 !important;
+}
+.w3-dark-grey{
+  background:#111 !important;
+  color:#fff !important;
+}
+.w3-button{
+  border-radius:0 !important;
+}
+hr[style*="solid red"]{
+  border-color:#000 !important;
+}
+.zimola-nosaukums{
+  font-family:"Inconsolata", monospace;
+  letter-spacing:2px;
+  font-size:42px;
+  line-height:1.1;
+  text-transform:uppercase;
+}
+.portfelja-sadala{
+  min-height:auto;
+  padding-top:56px;
+  padding-bottom:24px;
+}
+.sadala-virsraksta-rinda{
+  display:flex;
+  align-items:center;
+  gap:16px;
+  flex-wrap:wrap;
+}
+.sadala-virsraksta-rinda .w3-xxxlarge{
+  margin:0;
+}
+.virsraksta-logo{
+  width:64px;
+  height:auto;
+  display:block;
+  mix-blend-mode:darken;
+  filter:contrast(1.05) saturate(1.02);
+}
+.satura-kartite{
+  margin:24px 0;
+  padding:24px;
+  border:2px solid #111;
+  background:#f7f7f7;
+}
+.temu-saraksts{
+  display:grid;
+  gap:12px;
+}
+.temas-ieraksts{
+  margin:0;
+  padding:6px 0 10px;
+}
+.temas-ieraksts + .temas-ieraksts{
+  margin-top:18px;
+}
+.temas-virsraksta-rinda{
+  display:grid;
+  grid-template-columns:auto auto;
+  align-items:center;
+  gap:18px;
+  justify-content:start;
+}
+.temas-zime{
+  margin:0;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-width:220px;
+  min-height:48px;
+  padding:8px 12px;
+  border:2px solid #111;
+  background:#fff;
+  font-size:18px;
+}
+.temas-apraksts{
+  margin:18px 0 0;
+  max-width:760px;
+  padding:14px 16px;
+  border-left:5px solid #111;
+  background:#efefef;
+  line-height:1.7;
+  font-size:17px;
+}
+.temas-programma{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  margin:0;
+  min-width:220px;
+  min-height:48px;
+  padding:8px 12px;
+  border:2px solid #111;
+  background:#fff;
+  color:#111;
+  font-size:16px;
+  font-weight:600;
+  letter-spacing:0;
+  text-transform:none;
+}
+.temas-programmas-rinda{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  margin:0;
+  flex-wrap:wrap;
+}
+.programmas-logo{
+  display:block;
+  width:48px;
+  height:48px;
+  object-fit:contain;
+}
+.temas-attela-saite{
+  display:inline-block;
+  margin-top:14px;
+  text-decoration:none;
+}
+.temas-attels{
+  display:block;
+  width:min(100%, 680px);
+  height:auto;
+  background:#fff;
+  margin-top:26px;
+}
+.temas-attels-mazs{
+  width:min(100%, 420px);
+}
+.temas-attels-logo{
+  width:min(100%, 380px);
+}
+.temas-logo-rinda{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  gap:16px;
+  margin-top:16px;
+}
+.temas-attels-logo{
+  width:min(100%, 380px);
+}
+.logo-atzime{
+  max-width:760px;
+  padding:14px 20px 18px;
+  border:2px solid #111;
+  background:#fff;
+}
+.logo-atzimes-birka{
+  display:inline-block;
+  margin:0 0 10px;
+  padding:6px 10px;
+  border:1px solid #2f6b3b;
+  background:#3f8a4c;
+  color:#fff;
+  font-size:14px;
+  letter-spacing:1px;
+  text-transform:uppercase;
+}
+.temas-logo-teksts{
+  margin:0;
+  max-width:none;
+  background:transparent;
+  border-left:0;
+  padding:0;
+}
+.temas-attelu-rinda{
+  display:flex;
+  flex-wrap:nowrap;
+  gap:12px;
+  align-items:flex-start;
+}
+.temas-attelu-rinda .temas-attels{
+  flex:0 0 auto;
+  width:260px;
+}
+.temas-ietvars{
+  display:block;
+  width:min(100%, 520px);
+  height:360px;
+  margin-top:16px;
+  border:1px solid #111;
+  background:#fff;
+}
+.video-iegulums{
+  width:min(100%, 760px);
+  margin-top:16px;
+}
+.video-iegulums iframe,
+.video-iegulums video{
+  display:block;
+  width:100%;
+  max-width:100%;
+  aspect-ratio:16 / 9;
+  height:auto;
+  border:1px solid #111;
+  background:#fff;
+}
+.video-iegulums video{
+  object-fit:cover;
+}
+.video-iegulums .video-thumb{
+  position:relative;
+  display:block;
+  width:100%;
+  max-width:100%;
+  aspect-ratio:16 / 9;
+  border:1px solid #111;
+  background:#000;
+  overflow:hidden;
+}
+.video-iegulums .video-thumb img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+.video-iegulums .video-play{
+  position:absolute;
+  inset:0;
+  margin:auto;
+  width:80px;
+  height:80px;
+  border-radius:50%;
+  background:rgba(0,0,0,0.55);
+  color:#fff;
+  display:grid;
+  place-items:center;
+  font-size:46px;
+  line-height:1;
+  transition:background .2s ease, transform .2s ease;
+}
+.video-iegulums .video-thumb:hover .video-play{
+  background:rgba(0,0,0,0.8);
+  transform:scale(1.05);
+}
+.sadalas-apaksvirsraksts{
+  margin:0 0 14px;
+  font-size:28px;
+  text-transform:uppercase;
+  letter-spacing:1px;
+}
+.definicijas-lauks{
+  margin:0 0 18px;
+  display:flex;
+  align-items:center;
+  padding:10px 20px;
+  min-height:64px;
+  border-left:6px solid #111;
+  background:#e9e9e9;
+  font-size:20px;
+  line-height:1.6;
+}
+.sadalas-teksts{
+  margin:0;
+  line-height:1.8;
+  font-size:18px;
+}
+.lejupielades-rinda{
+  margin:18px 0 0;
+  font-size:18px;
+}
+.lejupielades-saite{
+  color:#111;
+  text-decoration:none;
+}
+.lejupielades-poga{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-width:180px;
+  min-height:50px;
+  padding:10px 18px;
+  border:2px solid #111;
+  background:#111;
+  color:#fff;
+  font-weight:700;
+  transition:background .2s ease,color .2s ease;
+}
+.lejupielades-poga:hover{
+  background:#fff;
+  color:#111;
+}
+.temas-galerija{
+  display:grid;
+  grid-template-columns:repeat(2, minmax(0, 1fr));
+  gap:18px;
+  margin-top:24px;
+}
+.temas-bilde{
+  width:100%;
+  display:block;
+  height:520px;
+  object-fit:contain;
+  object-position:top center;
+  background:#fff;
+  border:1px solid #d5d5d5;
+}
+.temas-plakats{
+  grid-column:1 / -1;
+  max-width:360px;
+  height:auto;
+  object-fit:contain;
+}
+.temas-kartite-pilna{
+  grid-column:1 / -1;
+  margin:0;
+  padding:12px 24px;
+}
+.temas-kartite-vienkarsa{
+  border:0;
+  background:transparent;
+  padding:0;
+}
+.avotu-saraksts{
+  display:grid;
+  gap:12px;
+  margin-top:16px;
+}
+.avota-saite{
+  display:block;
+  width:fit-content;
+  max-width:760px;
+  padding:10px 12px;
+  border:1px solid #111;
+  background:linear-gradient(145deg, #ffffff, #f3f3f3);
+  color:#111;
+  text-decoration:none;
+  line-height:1.6;
+  transition:transform .2s ease, box-shadow .2s ease;
+}
+.avota-saite:hover{
+  transform:translateY(-2px);
+}
+.darbu-saites{
+  display:grid;
+  grid-template-columns:repeat(3, minmax(0, 1fr));
+  gap:18px;
+  margin-top:22px;
+}
+.darba-kartite{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  min-height:150px;
+  padding:18px;
+  border:2px solid #111;
+  background:linear-gradient(145deg, #ffffff, #f2f2f2);
+  color:#111;
+  text-decoration:none;
+  transition:transform .2s ease, box-shadow .2s ease;
+}
+.darba-kartite:hover{
+  transform:translateY(-3px);
+  box-shadow:10px 10px 0 #111;
+}
+.darba-kartites-birka{
+  display:inline-block;
+  width:fit-content;
+  padding:5px 9px;
+  border:1px solid #111;
+  background:#111;
+  color:#fff;
+  font-size:13px;
+  letter-spacing:1px;
+  text-transform:uppercase;
+}
+.darba-kartite strong{
+  font-size:28px;
+  line-height:1.1;
+  text-align:center;
+}
+.teksta-piezime{
+  margin-top:14px;
+}
+.dok-bloks{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+}
+.pieradijumu-tikls{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+  margin-top:24px;
+}
+.pieradijumu-ieraksts{
+  height:100%;
+  margin:0;
+}
+.pieradijumu-ieraksts h3,
+.dok-kartite h3{
+  margin:0 0 10px;
+  font-size:24px;
+}
+.pieradijumu-ieraksts p{
+  margin:0;
+  line-height:1.7;
+}
+.dok-kartite{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+}
+.dok-poga{
+  display:inline-block;
+  padding:16px 24px;
+  border:2px solid #111;
+  background:#111;
+  color:#fff;
+  text-decoration:none;
+  font-size:18px;
+  font-weight:600;
+  transition:background .2s,color .2s;
+}
+.dok-poga:hover{
+  background:#fff;
+  color:#111;
+}
+.kadru-kopa{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:16px;
+  align-items:start;
+  margin-top:20px;
+}
+.kadra-kartite{
+  display:block;
+  padding:10px;
+  background:#fff;
+  color:#111;
+  text-decoration:none;
+}
+.kadra-kartite img{
+  width:100%;
+  display:block;
+  aspect-ratio:3/4;
+  object-fit:contain;
+  object-position:top;
+  background:#fff;
+}
+.kajenes-izkartojums{
+  padding-right:58px;
+}
+@media (max-width:700px){
+  .dok-bloks,
+  .dok-kartite{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+  .temas-virsraksta-rinda{
+    grid-template-columns:1fr;
+    align-items:start;
+  }
+  .kadru-kopa{
+    grid-template-columns:1fr;
+  }
+  .temas-galerija{
+    grid-template-columns:1fr;
+  }
+  .temas-plakats{
+    grid-column:auto;
+  }
+  .darbu-saites{
+    grid-template-columns:1fr;
+  }
+  .virsraksta-logo{
+    width:54px;
+  }
+}

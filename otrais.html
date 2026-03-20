@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+<title>Individuālā tēma</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;600&display=swap">
+<link rel="stylesheet" href="CSS/mansStils.css">
+</head>
+<body class="otra-lapa">
+
+<nav class="w3-sidebar w3-collapse w3-top w3-large w3-padding sanu-izkartojums" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft aizvert-izvelni-poga">Aizver ciet</a>
+  <div class="w3-container">
+    <h3 class="w3-padding-64 zimola-nosaukums"><b>Datorikas<br>portfolio</b></h3>
+  </div>
+  <div class="w3-bar-block">
+    <a href="index.html#sakums" onclick="w3_close()" class="w3-bar-item w3-button sanu-saite">Sākums</a>
+    <a href="index.html#sakums" onclick="w3_close()" class="w3-bar-item w3-button sanu-saite">Attēlu apstrāde</a>
+    <a href="index.html#izklajlapas" onclick="w3_close()" class="w3-bar-item w3-button sanu-saite">Izklājlapas</a>
+    <a href="index.html#tekstapstrade" onclick="w3_close()" class="w3-bar-item w3-button sanu-saite">Tekstapstrāde</a>
+    <a href="#tema" onclick="w3_close()" class="w3-bar-item w3-button sanu-saite">Individuālā tēma</a>
+    <a href="index.html#stundasdarbs" onclick="w3_close()" class="w3-bar-item w3-button sanu-saite">Stundas darbs</a>
+  </div>
+</nav>
+
+<header class="w3-container w3-top w3-hide-large w3-black w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-black w3-margin-right" onclick="w3_open()">☰</a>
+</header>
+
+<div class="w3-overlay w3-hide-large parklajs-klik" onclick="w3_close()" title="close side menu" id="myOverlay"></div>
+
+<nav class="labais-nav">
+  <p class="labais-nav-nosaukums">SATURS</p>
+  <a href="#ergonomisks">Ergonomisks darba režīms</a>
+  <a href="#plakats">Plakāts</a>
+  <a href="#avoti">Informācijas avoti</a>
+</nav>
+
+<div class="w3-main galvena-izkartojums">
+  <div class="w3-container portfelja-sadala" id="tema">
+    <h1 class="w3-jumbo" id="ergonomisks"><b>ERGONOMISKS DARBA REŽĪMS</b></h1>
+    <hr class="w3-round sadala-dalitajs">
+
+    <div class="satura-kartite temas-kartite-vienkarsa">
+      <p class="definicijas-lauks">Ergonomisks darba režīms.</p>
+    </div>
+    <div class="temas-galerija" id="galerija">
+      <img
+        class="temas-bilde"
+        src="images/Bilde 7.png"
+        alt="Individuālās tēmas informācija par darba laiku"
+      >
+      <img
+        class="temas-bilde"
+        src="images/Bilde 8.png"
+        alt="Individuālās tēmas informācija par atpūtas laiku un veselību"
+      >
+    </div>
+
+    <div class="satura-kartite temas-kartite-vienkarsa" id="plakats">
+      <p class="definicijas-lauks">Plakāts</p>
+    </div>
+    <img
+      class="temas-bilde temas-plakats"
+      src="images/Bilde 2.png"
+      alt="Ergonomiska darba režīma plakāts"
+    >
+
+    <div class="satura-kartite temas-kartite-vienkarsa" id="avoti">
+      <p class="definicijas-lauks">Informācijas avoti</p>
+    </div>
+    <div class="avotu-saraksts">
+      <a class="avota-saite" href="https://likumi.lv/ta/id/26019-darba-likums?&search=on#p139" target="_blank" rel="noopener noreferrer">likumi.lv - Darba likums</a>
+      <a class="avota-saite" href="https://www.octas.lv/blog/ergonomiski-darba-apstakli-stradajot-majas/" target="_blank" rel="noopener noreferrer">octas.lv - Ergonomiski darba apstākļi strādājot mājās</a>
+      <a class="avota-saite" href="https://teirdarbs.lv/ergonomika-darba-vieta/" target="_blank" rel="noopener noreferrer">teirdarbs.lv - Ergonomika darba vietā</a>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

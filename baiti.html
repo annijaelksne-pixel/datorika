@@ -1,0 +1,110 @@
+
+    
+    <!DOCTYPE html>
+<html lang="lv">
+<head>
+<meta charset="UTF-8">
+<title>Baiti</title>
+
+<style>
+.forma {
+width: 520px;
+border: 1px solid gray;
+padding: 12px;
+font-family: serif;
+}
+
+.virsraksts {
+font-size: 20px;
+margin-bottom: 10px;
+}
+
+.ievade {
+width: 150px;
+font-size: 18px;
+}
+
+.teksts {
+font-size: 18px;
+}
+
+.atbilde {
+margin-top: 25px;
+font-size: 20px;
+}
+
+.radio {
+margin-top: 10px;
+font-size: 18px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="forma" id="forma">
+
+<div class="virsraksts">
+Aprēķināt cik daudz informāciju var lejupielādēt
+</div>
+
+<input type="text" id="sekundes" class="ievade">
+
+<span class="teksts">
+sekundēs, ja interneta ātrums ir 25 Mbps.
+</span>
+
+<div class="atbilde">Atbilde</div>
+
+<input type="text" id="rezultats" class="ievade" readonly>
+
+<div class="radio">
+<label><input type="radio" name="vieniba" value="KiB"> KiB</label>
+<label><input type="radio" name="vieniba" value="KB"> KB</label>
+</div>
+
+</div>
+
+<script>
+let sekundes = document.getElementById("sekundes");
+let rezultats = document.getElementById("rezultats");
+let radio = document.querySelectorAll('input[name="vieniba"]');
+let forma = document.getElementById("forma");
+
+
+function aprekinat() {
+let s = parseFloat(sekundes.value);
+
+if (isNaN(s) || s <= 0) {
+rezultats.value = "";
+return;
+}
+
+let kb = 25 * s * 1000 / 8;
+let kib = kb * 1000 / 1024;
+
+let izvēle = document.querySelector('input[name="vieniba"]:checked');
+
+if (!izvēle) return;
+
+if (izvēle.value === "KB") {
+rezultats.value = kb;
+} else {
+rezultats.value = kib;
+}
+}
+
+radio.forEach(r => {
+r.addEventListener("click", aprekinat);
+});
+
+
+sekundes.addEventListener("focus", function() {
+forma.reset();
+rezultats.value = "";
+});
+</script>
+
+</body>
+</html>
